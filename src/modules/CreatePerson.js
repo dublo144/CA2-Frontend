@@ -36,4 +36,5 @@ const formatPersonObject = person => {
       }
     ]
   };
+  return formattedPerson;
 };
