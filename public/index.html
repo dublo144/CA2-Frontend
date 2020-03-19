@@ -78,10 +78,12 @@
             </button>
           </div>
           <div class="modal-body">
+
             <form id="newPersonForm">
               <div class="form-group">
                 <label for="firstNameInput">First Name</label>
                 <input
+                  name="firstName"
                   type="text"
                   class="form-control"
                   id="firstNameInput"
@@ -91,6 +93,7 @@
               <div class="form-group">
                 <label for="lastNameInput">Last Name</label>
                 <input
+                  name="lastName"
                   type="text"
                   class="form-control"
                   id="lastNameInput"
@@ -98,8 +101,9 @@
                 />
               </div>
               <div class="form-group">
-                <label for="lastNameInput">Email</label>
+                <label for="emailInput">Email</label>
                 <input
+                  name="email"
                   type="email"
                   class="form-control"
                   id="emailInput"
@@ -107,8 +111,29 @@
                 />
               </div>
               <div class="form-group">
+                <label for="phoneInput">Phone</label>
+                <input
+                  name="phone"
+                  type="number"
+                  class="form-control"
+                  id="phoneInput"
+                  placeholder="Phone"
+                />
+              </div>
+              <div class="form-group">
+                <label for="phoneDescriptionInput">Phone Description</label>
+                <input
+                  name="phoneDescription"
+                  type="text"
+                  class="form-control"
+                  id="phoneDescriptionInput"
+                  placeholder="Phone Description"
+                />
+              </div>
+              <div class="form-group">
                 <label for="streetInput">Street</label>
                 <input
+                  name="street"
                   type="text"
                   class="form-control"
                   id="streetInput"
@@ -116,8 +141,19 @@
                 />
               </div>
               <div class="form-group">
+                <label for="streetInput">Additional Address Info</label>
+                <input
+                  name="addressAdditional"
+                  type="text"
+                  class="form-control"
+                  id="addressAdditional"
+                  placeholder="Additional Info"
+                />
+              </div>
+              <div class="form-group">
                 <label for="zipInput">Zip</label>
                 <input
+                  name="zip"
                   type="text"
                   class="form-control"
                   id="zipInput"
@@ -127,6 +163,7 @@
               <div class="form-group">
                 <label for="cityInput">City</label>
                 <input
+                  name=city
                   type="text"
                   class="form-control"
                   id="cityInput"
@@ -134,15 +171,27 @@
                 />
               </div>
               <div class="form-group">
-                <label for="zipInput">Hobby</label>
+                <label for="hobbyName">Hobby</label>
                 <input
+                  name="hobbyName"
                   type="text"
                   class="form-control"
-                  id="hobby"
+                  id="hobbyName"
                   placeholder="Hobby"
                 />
               </div>
+              <div class="form-group">
+                <label for="hobbyDescription">Hobby Description</label>
+                <input
+                  name="hobbyDescription"
+                  type="text"
+                  class="form-control"
+                  id="hobbyDescription"
+                  placeholder="Hobby Description"
+                />
+              </div>
             </form>
+
           </div>
           <div class="modal-footer">
             <button
@@ -152,7 +201,7 @@
             >
               Close
             </button>
-            <button type="button" class="btn btn-primary" id="createPersonBtn">
+            <button type="submit" form="newPersonForm" class="btn btn-primary" id="createPersonBtn">
               Create Person
             </button>
           </div>
