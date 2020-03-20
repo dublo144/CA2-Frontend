@@ -1,11 +1,9 @@
-import { getDataFromAPIAppendToContainer } from '../utils/apiOperations';
-import { printCards } from '../utils/htmlOperations';
-
 const html = `
     <div>
+    <br>
         <h1 align="center">All Danish Zipcodes</h1>
         
-        
+        <br>
         <div id="resultContainer" class="scrollable-container"></div>
         <br>
         <button id="getAllZipsBtn" class="btn btn-primary">Get all zipcodes!</button>
@@ -43,7 +41,7 @@ export const getAllZipCodes = parentContainer => {
 
     const makeZipCodeList = data => {
         let result = `<div class="list-group">`;
-        const dataArray = data.map(data =>  `<a class="list-group-item">${data}</a>`);
+        const dataArray = data.map(data =>  `<a class="list-group-item">${data.city} ${data.zipcode}</a>`);
         result+= dataArray.join('');
         result+= "</div>"
         document.getElementById('resultContainer').innerHTML = result;

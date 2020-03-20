@@ -2,10 +2,14 @@ import { getDataFromAPIAppendToContainer } from '../utils/apiOperations';
 import { printCards } from '../utils/htmlOperations';
 
 const html = `
-    <div>
+    <div> 
+    <br>
         <h1 align="center">Persons From Zipcode</h1>
+        <br>
         <input id="zipInputForm" placeholder="Enter Zipcode"/>
-        <button id="findPersonBtn">Find Persons</button>
+        <button id="findPersonBtn" class="btn btn-primary">Find Persons</button>
+        <br>
+        <br>
         <div id="resultContainer"></div>
     </div>
 `;
@@ -25,11 +29,5 @@ export const cityCount = parentContainer => {
   };
 
 
-
-    
-const populatePersonTable = data => {
-    const dataArray = data.map(data => `<tr><td>${data.id}</td><td>${data.firstName}</td><td>${data.lastName}</td><td>${data.address.street}</td></tr>`);
-    document.getElementById('tableBody').innerHTML = dataArray.join('');
-};
 
       
