@@ -1,4 +1,4 @@
-import { getDataFromAPIAppendToContainer } from '../utils/apiOperations';
+import { getDataFromAPIAppendToContainer, getDataFromAPIAppendToContainerWErrorHandling } from '../utils/apiOperations';
 import { printCards } from '../utils/htmlOperations';
 
 const html = `
@@ -20,7 +20,7 @@ export const cityCount = parentContainer => {
     document.getElementById('findPersonBtn').addEventListener('click', () => {
       const zipCode = document.getElementById('zipInputForm').value;
       const getPersonsFromZipCode = `https://sarson.codes/CA2/api/person/city/${zipCode}`;
-      getDataFromAPIAppendToContainer(
+      getDataFromAPIAppendToContainerWErrorHandling(
       getPersonsFromZipCode,
         document.getElementById('resultContainer'),
         printCards

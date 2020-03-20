@@ -1,4 +1,4 @@
-import { getDataFromAPIAppendToContainer } from '../utils/apiOperations';
+import { getDataFromAPIAppendToContainerWErrorHandling } from '../utils/apiOperations';
 import { printCards } from '../utils/htmlOperations';
 
 const html = `
@@ -20,7 +20,7 @@ export const renderPersonsFromHobby = parentContainer => {
   document.getElementById('findPersonBtn').addEventListener('click', () => {
     const hobby = document.getElementById('hobbyInput').value;
     const getPersonFromHobbyURL = `https://sarson.codes/CA2/api/person/hobby/${hobby}`;
-    getDataFromAPIAppendToContainer(
+    getDataFromAPIAppendToContainerWErrorHandling(
       getPersonFromHobbyURL,
       document.getElementById('resultContainer'),
       printCards
