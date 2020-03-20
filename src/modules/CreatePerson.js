@@ -5,8 +5,8 @@ newPersonForm.addEventListener('submit', function(e) {
   e.preventDefault();
   const formData = new FormData(this);
   const newPerson = Object.fromEntries(formData);
-  // const url = 'https://sarson.codes/CA2/api/person';
-  const url = 'http://localhost:8080/CA2/api/person';
+  const url = 'https://sarson.codes/CA2/api/person';
+  //const url = 'http://localhost:8080/CA2/api/person';
   postToApi(url, formatPersonObject(newPerson));
 });
 

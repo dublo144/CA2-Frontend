@@ -22,7 +22,7 @@ export const postToApi = (url, data) => {
 export const getDataFromAPIAppendToContainerWErrorHandling = (url, div, callback, ...args) => {
   fetch(url)
     .then(response => {
-        if(!response.ok){ //OK is false for statuscodes >= 400
+        if(!response.ok){
           return Promise.reject({status: response.status, fullError: response.json() })
   
         }

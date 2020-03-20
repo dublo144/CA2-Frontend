@@ -1,4 +1,4 @@
-import { getDataFromAPIAppendToContainer, getDataFromAPIAppendToContainerWErrorHandling } from '../utils/apiOperations';
+import { getDataFromAPIAppendToContainerWErrorHandling } from '../utils/apiOperations';
 import { printCards } from '../utils/htmlOperations';
 
 const html = `
@@ -10,8 +10,7 @@ const html = `
         <button id="findPersonBtn" class="btn btn-primary">Find Persons</button>
         <br>
         <br>
-        <div id="resultContainer"></div>
-    </div>
+<div id="resultContainer" class="card-group"></div>
 `;
 
 export const cityCount = parentContainer => {

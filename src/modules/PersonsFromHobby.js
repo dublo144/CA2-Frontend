@@ -10,7 +10,7 @@ const html = `
         <button id="findPersonBtn" class="btn btn-primary">Find Persons</button>
         <br>
         <br>
-        <div id="resultContainer"></div>
+        <div id="resultContainer" class="card-group"></div>
     </div>
 `;
 

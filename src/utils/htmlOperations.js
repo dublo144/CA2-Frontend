@@ -8,15 +8,16 @@ export const printCards = array => {
     const zip = nullCheck(person.address.cityInfo.zipCode);
     const city = nullCheck(person.address.cityInfo.city);
 
-    let cardBody = `<div class='card-body'>
-        <h5 class='card-title'>${firstName} ${lastName}</h5>
+    let cardBody = `
+    <div class="card-header bg-secondary">${firstName} ${lastName}</div>
+    <div class='card-body bg-light'>
         <p class="card-text"><b>Email: </b>${email}</p>
         <p class="card-text"><b>Address: </b>${street} ${zip} ${city}</p>
         <p class="card-text"><b>Additional Info: </b>${additionalInfo}</p>
         ${handleHobbies(person.hobbies)}
         ${handlePhones(person.phones)}
       </div>`;
-    let card = `<div class='card' style='width: 18rem;>
+    let card = `<div class="card border-dark  text-black mb-3" style="max-width: 18rem;">
         ${cardBody}
       </div>`;
     return card;
