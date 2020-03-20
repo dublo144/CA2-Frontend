@@ -5,7 +5,7 @@ const html = `
     <div>
         <h1 align="center">Persons From Hobby</h1>
         <input id="hobbyInput" placeholder="Enter Hobby"/>
-        <button id="findPersonBtn">Find Persons</button>'
+        <button id="findPersonBtn">Find Persons</button>
         <div id="resultContainer"></div>
     </div>
 `;
