@@ -17,13 +17,17 @@ export const printCards = array => {
         ${handleHobbies(person.hobbies)}
         ${handlePhones(person.phones)}
       </div>`;
-    let card = `<div class="card border-dark  text-black mb-3" style="max-width: 18rem;">
+
+    let card = `<div class="col-3"><div class="card border-dark text-black mb-3">
         ${cardBody}
-      </div>`;
+      </div></div>`;
     return card;
   });
+  cardsMap.unshift('<div class="row">');
+  cardsMap.push('</div>');
   return cardsMap.join('');
 };
+
 
 const handleHobbies = hobbies => {
   if (Array.isArray(hobbies) && hobbies.length) {
