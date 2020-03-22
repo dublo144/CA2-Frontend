@@ -37,3 +37,9 @@ body {
                          color-stop(.5, transparent), to(transparent));
   }
   
+
+  a:hover {
+    background-color: #87CEEB;
+  }
+
+  
