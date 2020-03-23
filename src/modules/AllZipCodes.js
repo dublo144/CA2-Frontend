@@ -39,9 +39,20 @@ export const getAllZipCodes = parentContainer => {
       }
     )};
 
+    function getRandomColor() {
+      var letters = '0123456789ABCDEF';
+      var color = '#';
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+
+    
     const makeZipCodeList = data => {
         let result = `<div class="list-group">`;
-        const dataArray = data.map(data =>  `<a class="list-group-item">${data.city} ${data.zipcode}</a>`);
+        const dataArray = data.map(data =>  `<a a:hover="getRandomColor()" class="list-group-item">${data.city} ${data.zipcode}</a>`);
         result+= dataArray.join('');
         result+= "</div>"
         document.getElementById('resultContainer').innerHTML = result;
